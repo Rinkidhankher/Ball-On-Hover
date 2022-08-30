@@ -1,0 +1,48 @@
+html,
+body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    font-size: 40px;
+    text-align: center;
+}
+
+.main-body {
+    height: 500px;
+    width: 500px;
+    background-color: rgb(145, 182, 182);
+    border: solid 4px rgb(36, 36, 92);
+    margin: auto;
+}
+
+.child {
+    background-color: rgb(15, 214, 15);
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    animation: left-to-right 1s forwards infinite ease-in;
+}
+
+.main-body:hover .child {
+    animation-play-state: paused;
+    transition: 1s;
+}
+
+@keyframes left-to-right {
+    0% {
+        transform: translateX(0%);
+    }
+    33% {
+        transform: translateY(400%);
+    }
+    66% {
+        transform: translateX(400%) translateY(400%);
+    }
+    100% {
+        transform: translateX(400%);
+    }
+}
